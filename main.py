@@ -25,7 +25,7 @@ def decode_pdf():
     pdf_file = BytesIO(pdf_data)
 
     # Usar el num_guia como el nombre del archivo PDF
-    file_name = f"archivo_{num_guia}.pdf"
+    file_name = f"{num_guia}.pdf"
 
     # Devolver el archivo como respuesta
     return send_file(pdf_file, as_attachment=True, download_name=file_name, mimetype='application/pdf')
